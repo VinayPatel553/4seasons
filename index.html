@@ -235,7 +235,6 @@
               placeholder="Your Message Here..."
               required
             ></textarea>
-            <div class="g-recaptcha" data-sitekey='6LeBzoonAAAAAC2KJiHn-gJ0xFPnBgtYdlYdlRgg'></div>
           </div>
           <input type="submit" value="Submit" class="form-btn" />
         </form>
@@ -243,26 +242,9 @@
       
       <footer class="footer"></footer>
       
-      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
       <script src="script.js"></script>
       <script>
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-          event.preventDefault(); // Prevent the default form submission
-      
-          verifyCaptchaAndSubmit();
-        });
-      
-        function verifyCaptchaAndSubmit() {
-          var captchaResponse = grecaptcha.getResponse();
-          if (captchaResponse.length === 0) {
-            alert("Invalid Captcha 🛑");
-            return;
-          }
-      
-          // You can add code here to send the form data to the server if the CAPTCHA is valid.
-          // For now, just showing a success message:
-          alert("Form submitted successfully ✅");
-        }
+        
         function validateForm() {
     var fullName = document.getElementById('full-name').value;
     var email = document.getElementById('email').value;

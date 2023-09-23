@@ -199,7 +199,7 @@
       <!-- Contact -->
       <section class="contact">
         <h1 class="contact-heading">Contact Us</h1>
-        <form class="contact-form center" id="contact-form">
+        <form class="contact-form center" id="contact-form" onsubmit="formSubmittedSuccessfully()>
           <div class="input-group">
             <label>Full Name *</label>
             <input
@@ -255,10 +255,10 @@
       alert("Please fill in all required fields.");
       return false;
     }
-          else{
-            alert("Form submitted successfully ✅");
-          }
   }
+        function formSubmittedSuccessfully() {
+  alert("Form submitted successfully!");
+}
       </script>
       
   </body>

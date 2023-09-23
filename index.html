@@ -199,7 +199,7 @@
       <!-- Contact -->
       <section class="contact">
         <h1 class="contact-heading">Contact Us</h1>
-        <form class="contact-form center" id="contact-form" onsubmit="formSubmittedSuccessfully()">
+        <form class="contact-form center" id="contact-form">
           <div class="input-group">
             <label>Full Name *</label>
             <input
@@ -236,6 +236,7 @@
               required
             ></textarea>
           </div>
+          <div class="g-recaptcha" data-sitekey='6LeBzoonAAAAAC2KJiHn-gJ0xFPnBgtYdlYdlRgg'></div>
           <input type="submit" value="Submit" class="form-btn" />
         </form>
       </section>
@@ -244,7 +245,20 @@
       
       <script src="script.js"></script>
       <script>
-        
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+          event.preventDefault(); // Prevent the default form submission
+      
+          verifyCaptchaAndSubmit();
+        });
+      
+        function verifyCaptchaAndSubmit() {
+          var captchaResponse = grecaptcha.getResponse();
+          if (captchaResponse.length === 0) {
+            alert("Invalid Captcha 🛑");
+            return;
+          }
+          alert("Form submitted successfully ✅");
+        }
         function validateForm() {
     var fullName = document.getElementById('full-name').value;
     var email = document.getElementById('email').value;
@@ -256,9 +270,6 @@
       return false;
     }
   }
-        function formSubmittedSuccessfully() {
-  alert("Form submitted successfully ✅");
-}
       </script>
       
   </body>

@@ -22,7 +22,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "frame-ancestors 'https://4seasons-git-vul-2-x-content-type-vinaypatel553.vercel.app/';"
+          "value": "default-src 'self' https://4seasons-git-vul-2-x-content-type-vinaypatel553.vercel.app;"
         },
         {
           "key": "X-XSS-Protection",

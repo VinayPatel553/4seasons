@@ -13,3 +13,21 @@ A lightweight analytics dashboard that visualizes trading metrics, charts, and t
 ```bash
 git clone https://github.com/VinayPatel553/journalyst-task.git
 cd journalyst-task
+
+Step 2: Install Dependencies:
+```bash
+	->For Backend (server):
+      cd server 
+      npm install
+
+  ->For Frontend (client):
+      cd client
+      npm install 
+      
+Step 3: Run backend:
+```bash
+	node index.js
+  
+Step 4: Run Frontend:
+```bash
+	npm start 
